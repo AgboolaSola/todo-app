@@ -7,20 +7,20 @@ const TodoItem = ({ todo, deleteTodo, completeTodo }) => {
           type="button"
           className="bg-white rounded-md text-gray-800 px-4 py-1 cursor-pointer"
           onClick={() => {
-            deleteTodo(todo.id);
-          }}
-        >
-          Delete
-        </button>{" "}
-        <button
-          type="button"
-          className="bg-white rounded-md text-gray-800 px-4 py-1 cursor-pointer"
-          onClick={() => {
             completeTodo(todo.id);
           }}
         >
           {!todo.completed ? "Done ✅ " : "Undo ↩"}
         </button>
+        <button
+          type="button"
+          className="bg-white rounded-md text-gray-800 px-4 py-1 cursor-pointer"
+          onClick={() => {
+            deleteTodo(todo.id);
+          }}
+        >
+          Delete
+        </button>{" "}
       </div>
     </div>
   );
